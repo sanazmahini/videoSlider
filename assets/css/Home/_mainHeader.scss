@@ -1,0 +1,118 @@
+﻿// Start Css
+//angle-down
+.fa-angle-down{
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 22px;
+    height: 22px;
+    border: 2px solid transparent;
+    border-radius: 100px
+   }
+   
+   .fa-angle-down::after {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid;
+    border-right: 2px solid;
+    transform: rotate(45deg);
+    left: 4px;
+    top: 2px
+   }   
+
+//search css
+   .fa-search{
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 16px;
+    height: 16px;
+    border: 2px solid;
+    border-radius: 100%;
+    margin-left: -4px;
+    margin-top: -4px
+   }
+
+   .fa-search::after {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    border-radius: 3px;
+    width: 2px;
+    height: 8px;
+    background: currentColor;
+    transform: rotate(-45deg);
+    top: 10px;
+    left: 12px
+   } 
+
+   //fa-times css
+   .fa-times{
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 22px;
+    height: 22px;
+    border: 2px solid transparent;
+    border-radius: 40px
+   }
+   
+   .fa-times::after,
+   .fa-times::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 16px;
+    height: 2px;
+    background: currentColor;
+    transform: rotate(45deg);
+    border-radius: 5px;
+    top: 8px;
+    left: 1px
+   }
+   
+   .fa-times::after {
+    transform: rotate(-45deg)
+   }
+// End css
+
+@media (max-width: 1023px){
+   .menu > ul > li > .menu-arrow > i{
+       height: 12px;
+       width: 12px;
+       &:after{
+           display: none;
+       }
+   }
+   }
+   @media (max-width: 1023px){
+       .menu > ul > li > ul.sub-menu > li .menu-arrow-02 > i {
+        height: 12px;
+               width: 12px;
+               &:after{
+                   display: none;
+               }
+       }
+       }
+       @media (max-width: 1023px){
+           .menu-active .menu > .menu-list {
+               overflow-y: auto;
+           }
+           }
+           
+           .menu > ul > li > ul > li > ul.sub-menu > li > a{
+               border-bottom: 0;
+           }
+           .menu > ul > li > a{
+               justify-content: start;
+           }
+              

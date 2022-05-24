@@ -1,0 +1,69 @@
+﻿@import "../mixins";
+@import "../variables";
+@media (min-width:$screen-md-down) {
+    .menu {
+        > .menu-list {
+            > li {
+                &:hover {
+                    > ul.sub-menu {
+                        opacity: 1;
+                        visibility: visible;
+                        @include rotateX(0);
+                    }
+
+                    > .megamenu {
+                        opacity: 1;
+                        visibility: visible;
+                        @include rotateX(0);
+                    }
+                }
+
+                > ul {
+                    &.sub-menu {
+                        opacity: 0;
+                        visibility: hidden;
+                        @include transform-style(preserve-3d);
+                        @include rotateX(-75);
+
+                        > li {
+                            > ul.sub-menu {
+                                opacity: 0;
+                                visibility: hidden;
+                                @include transform-style(preserve-3d);
+                                @include rotateX(-75);
+
+                                > li {
+                                    > ul.sub-menu {
+                                        opacity: 0;
+                                        visibility: hidden;
+                                        @include transform-style(preserve-3d);
+                                        @include rotateX(-75);
+                                    }
+
+                                    &:hover > ul.sub-menu {
+                                        opacity: 1;
+                                        visibility: visible;
+                                        @include rotateX(0);
+                                    }
+                                }
+                            }
+
+                            &:hover > ul.sub-menu {
+                                opacity: 1;
+                                visibility: visible;
+                                @include rotateX(0);
+                            }
+                        }
+                    }
+                }
+
+                > .megamenu {
+                    opacity: 0;
+                    visibility: hidden;
+                    @include transform-style(preserve-3d);
+                    @include rotateX(-75);
+                }
+            }
+        }
+    }
+}

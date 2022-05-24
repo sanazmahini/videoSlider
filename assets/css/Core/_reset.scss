@@ -1,0 +1,186 @@
+﻿@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: normal;
+    // font-display: optional;
+    src: local('IRANSans'), url('/assets/fonts/IRANSans/Farsi_numerals/webFonts/fonts/woff2/IRANSansWeb\(FaNum\)_Medium.woff2') format('woff2'), url('/assets/fonts/IRANSans/Farsi_numerals/webFonts/fonts/woff/IRANSansWeb\(FaNum\)_Medium.woff') format('woff'), url('/assets/fonts/IRANSans/Farsi_numerals/webFonts/fonts/ttf/IRANSansWeb\(FaNum\)_Medium.ttf') format('truetype'), url('/assets/fonts/IRANSans/Farsi_numerals/webFonts/fonts/eot/IRANSansWeb\(FaNum\)_Medium.eot') format('eot'), url('/assets/fonts/IRANSans/Farsi_numerals/webFonts/fonts/eot/IRANSansWeb\(FaNum\)_Medium.eot?#iefix') format('embedded-opentype');
+}
+/*@font-face {
+    font-family: IRANYekan;
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src: local('IRANYekan'), url('/assets/fonts/IRANYekan/Farsi_numerals/WebFonts/fonts/woff2/IRANYekanMediumFaNum.woff2') format('woff2'),
+        url('/assets/fonts/IRANYekan/Farsi_numerals/WebFonts/fonts/woff/iranyekanwebmediumfanum.woff') format('woff'),
+        url('/assets/fonts/IRANYekan/Farsi_numerals/WebFonts/fonts/ttf/iranyekanwebmediumfanum.ttf') format('truetype'),
+        url('/assets/fonts/IRANYekan/Farsi_numerals/WebFonts/fonts/eot/iranyekanwebmediumfanum.eot') format('eot'),
+        url('/assets/fonts/IRANYekan/Farsi_numerals/WebFonts/fonts/eot/iranyekanwebmediumfanum.eot?#iefix') format('embedded-opentype');
+}*/
+html {
+    overflow-y: scroll;
+    // scroll-behavior: smooth;
+}
+.font-size-large {
+    font-size: 150%;
+}
+
+a {
+    color: $linkColor;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+/*.html-lazy {
+    content-visibility: auto;
+}*/
+
+[dir="rtl"] {
+    * {
+        text-align: right;
+    }
+}
+
+html, body {
+    /*font-family: IRANYekan !important;*/
+    font-family: IRANSans !important;
+    font-weight: 300;
+    background-color: $bodyColor;
+    
+}
+
+
+
+::selection {
+    background-color: $themeColor;
+    color: #fff;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+article {
+    background-color: $contentColor;
+    color: $darkColor;
+    will-change: transform;
+
+    p {
+        line-height: $lhArticle;
+        font-size: $fzP;
+        text-align: justify !important;
+    }
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-size: $fzH4;
+        padding: 1.5rem 0 0 0;
+        //font-weight: bold;
+    }
+
+    @include media-min(768px) {
+        h2 {
+            font-size: $fzH2;
+            //font-weight: bold;
+        }
+
+        h3 {
+            font-size: $fzH3;
+            //font-weight: bold;
+        }
+
+        h4 {
+            font-size: $fzH4;
+            //font-weight: bold;
+        }
+
+        h5,
+        h6 {
+            font-size: $fzH5;
+            //font-weight: bold;
+        }
+    }
+
+    ol,
+    ul {
+        li {
+            color: $darkColor;
+            font-size: $fzP;
+            line-height: $lhArticle;
+        }
+    }
+
+    blockquote {
+        background-color: $darkColor;
+        color: $bgColor;
+        padding: 2.5rem;
+        border-radius: 5px;
+    }
+
+    a {
+        text-decoration: underline;
+        -webkit-text-decoration-color: #20a6f9;
+        text-decoration-color: #20a6f9;
+        -webkit-text-decoration-style: dashed;
+        text-decoration-style: dashed;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 10px;
+    }
+
+    header a {
+        text-decoration: none;
+    }
+
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+        content-visibility: auto;
+    }
+
+    iframe, video {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16/9;
+    }
+}
+
+/*The same as right if direction is left-to-right and left if direction is right-to-left.*/
+.text-end{
+    text-align:end;
+}
+/*The inline contents are aligned to the left edge of the line box.*/
+.text-start{
+    text-align:start;
+}
+[id*='CaptchaImage'] {
+    width: 90px;
+    height: 38px;
+}
+[id*='CaptchaInputText'] {
+ display: block;
+    width: 107px;
+    height: 38px;
+    outline: none;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    &:focus {
+        border: 1px solid #2980b9;
+    }
+}
+.refresh-captcha-btn {
+    width: 50px !important;
+    height: 38px;
+    margin:0 4px;
+}

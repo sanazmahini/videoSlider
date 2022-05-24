@@ -1,0 +1,26 @@
+﻿//colors
+$primary: #1b2560;
+$warning: #ff6a00;
+$primary-light: #3a4aa0;
+$white: #fff;
+$dark: #333;
+$black: #000;
+$light: #f2f2f2;
+$black_15: rgba(0, 0, 0, 0.15);
+$black_8: rgba(0, 0, 0, 0.08);
+$black_30: rgba(0, 0, 0, .3);
+$black_45: rgba(0, 0, 0, 0.45);
+$black_40: rgba(0, 0, 0, 0.40);
+$black_70: rgba(0, 0, 0, 0.7);
+$gray: #595959;
+$gray-light: lighten($gray,15%);
+//fonts
+$FontAwesome: Font Awesome 5 Free;
+//Mobile menu width
+$Mobile-max-width: 240px;
+$screen-md-down: 1023px;
+$dropdown-minwidth: 200px;
+//Media Width
+$screen-md-up: 1024px;
+$menu-height: 60px;
+

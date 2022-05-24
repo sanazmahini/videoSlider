@@ -1,0 +1,45 @@
+﻿//color
+$bodyColor: #fafafa;
+$contentColor: #fff;
+$themeColor: #2980b9;
+$linkColor: #005a96;
+$actionColor: #e02700;
+$successColor:#006715;
+$darkColor: #2c3e50;
+$bgColor: #f2f2f2;
+$borderColor:#ccc;
+$fzH1: 2rem;
+$fzH2: 1.6rem;
+$fzH3: 1.3rem;
+$fzH4: 1.1rem;
+$fzH5: 1rem;
+$fzP: 0.95rem;
+$lhArticle: 2.2rem;
+
+
+
+@mixin lineClamp($n) {
+    display: -webkit-box;
+    -webkit-line-clamp: $n;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+// default breakpknts
+$xs: "480px";
+$sm: "600px";
+$md: "799px";
+$lg: "1010px";
+$xl: "1280px";
+@mixin media-min($size) {
+    @media (min-width: $size) {
+        @content;
+    }
+}
+
+@mixin media-max($size) {
+    @media (max-width: $size) {
+        @content;
+    }
+}
+
+

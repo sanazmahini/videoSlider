@@ -1,0 +1,278 @@
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: normal;
+  src: local("IRANSans"), url("/assets/fonts/IRANSans/Farsi_numerals/webFonts/fonts/woff2/IRANSansWeb(FaNum)_Medium.woff2") format("woff2"), url("/assets/fonts/IRANSans/Farsi_numerals/webFonts/fonts/woff/IRANSansWeb(FaNum)_Medium.woff") format("woff"), url("/assets/fonts/IRANSans/Farsi_numerals/webFonts/fonts/ttf/IRANSansWeb(FaNum)_Medium.ttf") format("truetype"), url("/assets/fonts/IRANSans/Farsi_numerals/webFonts/fonts/eot/IRANSansWeb(FaNum)_Medium.eot") format("eot"), url("/assets/fonts/IRANSans/Farsi_numerals/webFonts/fonts/eot/IRANSansWeb(FaNum)_Medium.eot?#iefix") format("embedded-opentype");
+}
+/*@font-face {
+    font-family: IRANYekan;
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src: local('IRANYekan'), url('/assets/fonts/IRANYekan/Farsi_numerals/WebFonts/fonts/woff2/IRANYekanMediumFaNum.woff2') format('woff2'),
+        url('/assets/fonts/IRANYekan/Farsi_numerals/WebFonts/fonts/woff/iranyekanwebmediumfanum.woff') format('woff'),
+        url('/assets/fonts/IRANYekan/Farsi_numerals/WebFonts/fonts/ttf/iranyekanwebmediumfanum.ttf') format('truetype'),
+        url('/assets/fonts/IRANYekan/Farsi_numerals/WebFonts/fonts/eot/iranyekanwebmediumfanum.eot') format('eot'),
+        url('/assets/fonts/IRANYekan/Farsi_numerals/WebFonts/fonts/eot/iranyekanwebmediumfanum.eot?#iefix') format('embedded-opentype');
+}*/
+html {
+  overflow-y: scroll;
+}
+
+.font-size-large {
+  font-size: 150%;
+}
+
+a {
+  color: #005a96;
+}
+a:hover {
+  text-decoration: none;
+}
+
+/*.html-lazy {
+    content-visibility: auto;
+}*/
+[dir=rtl] * {
+  text-align: right;
+}
+
+html, body {
+  /*font-family: IRANYekan !important;*/
+  font-family: IRANSans !important;
+  font-weight: 300;
+  background-color: #fafafa;
+}
+
+::selection {
+  background-color: #2980b9;
+  color: #fff;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+article {
+  background-color: #fff;
+  color: #2c3e50;
+  will-change: transform;
+}
+article p {
+  line-height: 2.2rem;
+  font-size: 0.95rem;
+  text-align: justify !important;
+}
+article h2,
+article h3,
+article h4,
+article h5,
+article h6 {
+  font-size: 1.1rem;
+  padding: 1.5rem 0 0 0;
+}
+@media (min-width: 768px) {
+  article h2 {
+    font-size: 1.6rem;
+  }
+  article h3 {
+    font-size: 1.3rem;
+  }
+  article h4 {
+    font-size: 1.1rem;
+  }
+  article h5,
+article h6 {
+    font-size: 1rem;
+  }
+}
+article ol li,
+article ul li {
+  color: #2c3e50;
+  font-size: 0.95rem;
+  line-height: 2.2rem;
+}
+article blockquote {
+  background-color: #2c3e50;
+  color: #f2f2f2;
+  padding: 2.5rem;
+  border-radius: 5px;
+}
+article a {
+  text-decoration: underline;
+  -webkit-text-decoration-color: #20a6f9;
+  text-decoration-color: #20a6f9;
+  -webkit-text-decoration-style: dashed;
+  text-decoration-style: dashed;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 10px;
+}
+article header a {
+  text-decoration: none;
+}
+article img {
+  max-width: 100% !important;
+  height: auto !important;
+  content-visibility: auto;
+}
+article iframe, article video {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+}
+
+/*The same as right if direction is left-to-right and left if direction is right-to-left.*/
+.text-end {
+  text-align: end;
+}
+
+/*The inline contents are aligned to the left edge of the line box.*/
+.text-start {
+  text-align: start;
+}
+
+[id*=CaptchaImage] {
+  width: 90px;
+  height: 38px;
+}
+
+[id*=CaptchaInputText] {
+  display: block;
+  width: 107px;
+  height: 38px;
+  outline: none;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+[id*=CaptchaInputText]:focus {
+  border: 1px solid #2980b9;
+}
+
+.refresh-captcha-btn {
+  width: 50px !important;
+  height: 38px;
+  margin: 0 4px;
+}
+
+.fa-angle-down {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  width: 22px;
+  height: 22px;
+  border: 2px solid transparent;
+  border-radius: 100px;
+}
+
+.fa-angle-down::after {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+  transform: rotate(45deg);
+  left: 4px;
+  top: 2px;
+}
+
+.fa-search {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  width: 16px;
+  height: 16px;
+  border: 2px solid;
+  border-radius: 100%;
+  margin-left: -4px;
+  margin-top: -4px;
+}
+
+.fa-search::after {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  border-radius: 3px;
+  width: 2px;
+  height: 8px;
+  background: currentColor;
+  transform: rotate(-45deg);
+  top: 10px;
+  left: 12px;
+}
+
+.fa-times {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  width: 22px;
+  height: 22px;
+  border: 2px solid transparent;
+  border-radius: 40px;
+}
+
+.fa-times::after,
+.fa-times::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 16px;
+  height: 2px;
+  background: currentColor;
+  transform: rotate(45deg);
+  border-radius: 5px;
+  top: 8px;
+  left: 1px;
+}
+
+.fa-times::after {
+  transform: rotate(-45deg);
+}
+
+@media (max-width: 1023px) {
+  .menu > ul > li > .menu-arrow > i {
+    height: 12px;
+    width: 12px;
+  }
+  .menu > ul > li > .menu-arrow > i:after {
+    display: none;
+  }
+}
+@media (max-width: 1023px) {
+  .menu > ul > li > ul.sub-menu > li .menu-arrow-02 > i {
+    height: 12px;
+    width: 12px;
+  }
+  .menu > ul > li > ul.sub-menu > li .menu-arrow-02 > i:after {
+    display: none;
+  }
+}
+@media (max-width: 1023px) {
+  .menu-active .menu > .menu-list {
+    overflow-y: auto;
+  }
+}
+.menu > ul > li > ul > li > ul.sub-menu > li > a {
+  border-bottom: 0;
+}
+
+.menu > ul > li > a {
+  justify-content: start;
+}
+
+/*# sourceMappingURL=style.css.map */
